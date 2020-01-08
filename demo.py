@@ -30,17 +30,17 @@ def process(text):
 
 def main():
     # setup()
-    fr = open('./Gratian0.txt', 'r').read()
-    sg = open('./Gratian3.txt', 'r').read()
-    fr_lemmas = process(JVReplacer().replace(fr.lower()))
-    sg_lemmas = process(JVReplacer().replace(sg.lower()))
-    fr_only = [lemma for lemma in fr_lemmas if lemma not in sg_lemmas]
-    sg_only = [lemma for lemma in sg_lemmas if lemma not in fr_lemmas]
+    a = open('./Gratian0.txt', 'r').read()
+    b = open('./Gratian3.txt', 'r').read()
+    a_lemmas = process(JVReplacer().replace(a.lower()))
+    b_lemmas = process(JVReplacer().replace(b.lower()))
+    a_only = [lemma for lemma in a_lemmas if lemma not in b_lemmas]
+    b_only = [lemma for lemma in b_lemmas if lemma not in a_lemmas]
 
-    fr_only.sort()
-    sg_only.sort()
-    print(fr_only)
-    print(sg_only)
+    a_only.sort()
+    b_only.sort()
+    print(a_only)
+    print(b_only)
 
 if __name__ == '__main__':
     main()
