@@ -30,8 +30,8 @@ def process(text):
 
 def main():
     # setup()
-    a = open('./Gratian0.txt', 'r').read()
-    b = open('./Gratian3.txt', 'r').read()
+    a = open('./Gratian1.txt', 'r').read()
+    b = open('./Gratian2.txt', 'r').read()
     a_lemmas = process(JVReplacer().replace(a.lower()))
     b_lemmas = process(JVReplacer().replace(b.lower()))
     a_only = [lemma for lemma in a_lemmas if lemma not in b_lemmas]
