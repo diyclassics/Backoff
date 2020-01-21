@@ -1,4 +1,8 @@
-# Backoff
+# the Gratian project
+
+![Gratian](images/Gratian.jpg)
+
+## Backoff
 Experimenting with CLTK backoff lemmatizer to identify unique words
 in the first and second recensions of Gratian's Decretum.
 
@@ -22,7 +26,6 @@ in the first and second recensions of Gratian's Decretum.
 + for each R2 lemma, decline the lemma
 + if any form the R2 lemma is found in the R1 word list, remove the lemma
 
-
 ### Notes
 Attempting to import the 'phi5' and 'phi7' corpora causes an
 `AttributeError: 'NoneType' object has no attribute 'endswith'`
@@ -30,4 +33,3 @@ error.
 
 Case matters. CLTK backoff lemmatizer lemmatizes
 'Humanum' as 'humanum', but 'humanum' as 'humanus'.
-
